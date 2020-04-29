@@ -1,0 +1,22 @@
+/* Färgvariabler */
+$dark-color: #303841;
+$light-color: #eeeeee;
+$yellow-color: #ffe36e;
+$red-color: #ea5455;
+$max-width: 1500px;
+$heading-font: 'Ubuntu', sans-serif;
+
+// Sätt textfärg baserat på bakrundsfärg
+@function set-text-color($color) {
+    @if(lightness($color) > 50) {
+        @return #303841;
+    } @else {
+        @return #eeeeee;
+    }
+}
+
+// Sätt bakgrunds- och textfärg
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

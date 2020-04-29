@@ -1,0 +1,12 @@
+// Standardbakgrunder
+.bg {
+    &-primary {
+        @include set-background($light-color);
+    }
+    &-dark {
+        @include set-background($dark-color);
+    }
+    &-white {
+        @include set-background(#fff);
+    }
+}
