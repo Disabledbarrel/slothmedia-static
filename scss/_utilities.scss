@@ -1,3 +1,24 @@
+// Container
+.container {
+    max-width: $max-width;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+
+    a:hover {
+        border: 1px solid $dark-color;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+
+    &-heading {
+        @include profile-heading;
+    }
+}
+
 // Standardbakgrunder
 .bg {
     &-primary {
@@ -36,4 +57,25 @@
             border-color: lighten( $red-color, 5% );
         }
     }
+}
+
+// Alerts
+.alert {
+    padding: 0.8rem;
+    margin: 1rem;
+    opacity: 0.9;
+    background: $light-color;
+    color: $dark-color;
+
+    &.alert-danger {
+        @include set-background($red-color);
+    }
+    &.alert-success {
+        @include set-background($yellow-color);
+    }
+}
+
+// Rund bild
+.round-img {
+    border-radius: 50%;
 }

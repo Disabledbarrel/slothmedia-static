@@ -9,7 +9,7 @@ $subheading-font: 'Montserrat Alternates', sans-serif;
 
 // Sätt textfärg baserat på bakrundsfärg
 @function set-text-color($color) {
-    @if(lightness($color) > 50) {
+    @if(lightness($color) > 70) {
         @return #303841;
     } @else {
         @return #eeeeee;
@@ -20,4 +20,14 @@ $subheading-font: 'Montserrat Alternates', sans-serif;
 @mixin set-background($color) {
     background-color: $color;
     color: set-text-color($color);
+}
+
+// Rubriker
+@mixin profile-heading {
+    font-family: $subheading-font;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    margin: 30px 0 30px 0;
 }

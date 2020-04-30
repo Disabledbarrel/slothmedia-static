@@ -1,5 +1,6 @@
 @import 'config';
 @import 'utilities';
+@import 'form';
 
 /* Generell styling*/
 body {
@@ -105,7 +106,6 @@ img {
         flex-direction: column;
         width: 80%;
         margin: auto;
-        align-items: left;
         justify-content: center;
         h2 {
             font-size: 2.5rem;
@@ -221,6 +221,11 @@ img {
         a:hover {
             border: 1px solid $dark-color;
         }
+    }
+}
+.container {
+    .btn-dark {
+        border: 1px solid $dark-color
     }
 }
 
