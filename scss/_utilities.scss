@@ -10,3 +10,30 @@
         @include set-background(#fff);
     }
 }
+
+// Knappar/länkar
+.btn {
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-family: $subheading-font;
+
+    &.btn-dark {
+        @include set-background($dark-color);
+        border: 1px solid $light-color;
+        &:hover {
+            @include set-background($light-color);
+            a {
+                @include set-background($light-color);
+            }
+        }
+    }
+    &.btn-red {
+        @include set-background($red-color);
+        border: 1px solid $red-color;
+        &:hover {
+            background-color: lighten( $red-color, 5% );
+            border-color: lighten( $red-color, 5% );
+        }
+    }
+}
