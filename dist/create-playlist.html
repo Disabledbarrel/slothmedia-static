@@ -27,23 +27,29 @@
         </div>
     </header>
     <section class="container">
-        <div class="profile-container">
-            <div class="profile">
-                <img src="img/elin.jpg" alt="profile picture" class="round-img">
-                <div class="profile-header">
-                    <h2 class="container-heading"><i class="fas fa-user-circle"></i> Dashboard</h2>
-                    <p>Welcome Username!</p>
-                </div>
+        <h2><i class="fas fa-play-circle"></i> Create Playlist</h2>
+        <form action="playlist.html" class="form">
+            <div class="form-group">
+                <label for="type">Type:</label><br>
+                <select name="type" id="type">
+                    <option value="0">* Select type of playlist</option>
+                    <option value="true">Public</option>
+                    <option value="false">Private</option>
+                </select>
+                <small class="form-text">Choose public or private playlist</small>
             </div>
-            <section class="profile-content">
-                <h3>My playlists</h3>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, molestiae.</p>
-                </div>
-                <a href="create-playlist.html" class="btn btn-red" title="Go to create playlist">Create Playlist</a>
-                <button class="btn btn-dark"><i class="fas fa-share-square"></i> Share</button>
-            </section>
-        </div> 
+            <div class="form-group">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title">
+                <small class="form-text">Add a title to your playlist</small>
+            </div>
+            <div class="form-group">
+                <label for="song-url">Song url:</label><br>
+                <input type="url" id="song-url">
+                <small class="form-text">Add a link to a song (from Youtube or Soundcloud)</small>
+            </div>
+            <input type="submit" class="btn btn-red" value="Create">
+        </form>
     </section>
 </body>
 </html>

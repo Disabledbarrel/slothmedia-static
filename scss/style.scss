@@ -252,3 +252,33 @@ img {
         color: $yellow-color;
     }
 }
+
+// Profile
+.profile-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .profile {
+        background-color: $light-color;
+        margin: 20px;
+        grid-column: 1/5;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        img {
+            width: 50%;
+            grid-column: 1/2;
+            margin: auto auto;
+            padding: 10px;
+        }
+        &-header {
+            grid-column: 2/5;
+            padding: 20px;
+        }
+    }
+    .profile-content {
+        margin: 20px;
+        grid-column: 1/5;
+    }
+}
+
+@import 'mobile';

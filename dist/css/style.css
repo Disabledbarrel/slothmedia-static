@@ -104,6 +104,7 @@
 .form input[type='text'],
 .form input[type='email'],
 .form input[type='password'],
+.form input[type='url'],
 .form select,
 .form textarea {
   display: block;
@@ -116,6 +117,7 @@
 .form input[type='text']:focus,
 .form input[type='email']:focus,
 .form input[type='password']:focus,
+.form input[type='url']:focus,
 .form select:focus,
 .form textarea:focus {
   outline: 2px solid #ea5455;
@@ -450,4 +452,119 @@ img {
 
 .footer-inner p {
   color: #ffe36e;
+}
+
+.profile-container {
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.profile-container .profile {
+  background-color: #eeeeee;
+  margin: 20px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.profile-container .profile img {
+  width: 50%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  margin: auto auto;
+  padding: 10px;
+}
+
+.profile-container .profile-header {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  padding: 20px;
+}
+
+.profile-container .profile-content {
+  margin: 20px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+}
+
+@media (max-width: 769px) {
+  .hide-sm {
+    display: none;
+  }
+  .main-header {
+    position: relative;
+  }
+  .header-inner {
+    width: 100%;
+    display: block;
+    padding: 10px;
+  }
+  .landing {
+    height: 40vh;
+  }
+  .landing-inner {
+    margin: 0 0 0 20px;
+  }
+  .landing-inner h2 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px #303841;
+  }
+  .information {
+    display: block;
+  }
+  .information h3 {
+    font-size: 1.5rem;
+  }
+  .information div {
+    margin-bottom: 20px;
+  }
+  .information .icon-container {
+    width: 80px;
+    height: 80px;
+  }
+  .information .icon-container i {
+    font-size: 2rem;
+    margin: 15px;
+  }
+  .concept, .about {
+    display: block;
+    text-align: center;
+  }
+  .concept-text, .about-text {
+    width: 100%;
+    padding: 20px;
+  }
+  .concept-text h5, .about-text h5 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  .container {
+    width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 0 30px;
+    overflow: visible;
+  }
+  .container h2 {
+    font-size: 1.3rem;
+  }
+  .container .profile-container .profile {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1025px) {
+  .concept-text {
+    padding: 20px;
+  }
 }
